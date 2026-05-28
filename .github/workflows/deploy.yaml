@@ -4,6 +4,13 @@ on:
   push:
     branches: [master]
 
+# Даём права на запись
+permissions:
+  contents: write   # разрешаем пушить коммиты
+  pages: write      # нужно для деплоя на Pages (если используется pages-action)
+  id-token: write   # может понадобиться для OIDC-авторизации (необязательно)
+
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
