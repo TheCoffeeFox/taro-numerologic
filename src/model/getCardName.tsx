@@ -24,5 +24,5 @@ const cardsMap: Record<number, string> = {
 };
 
 export function getCardName(order: number) {
-  return `[${order}] ${cardsMap[order] ?? "-"}`;
+  return `${cardsMap[order] ?? "-"}`;
 }
