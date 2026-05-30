@@ -1,5 +1,3 @@
-import { pluto } from "./pluto";
-
 const cardsMap: Record<number, string> = {
   1: "Маг",
   2: "Жрица",
@@ -24,7 +22,7 @@ const cardsMap: Record<number, string> = {
   21: "Мир",
   22: "Шут",
 };
+
 export function getCardName(order: number) {
-  const v = pluto(order);
-  return `[${v}] ${cardsMap[v] ?? "-"}`;
+  return `[${order}] ${cardsMap[order] ?? "-"}`;
 }

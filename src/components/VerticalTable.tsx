@@ -1,6 +1,7 @@
 import { Divider, Group, Table, Text } from "@mantine/core";
 import { calculate } from "../model/calculate";
 import { getCardName } from "../model/getCardName";
+import { pluto } from "../model/pluto";
 
 export function VerticalTable({ date }: { date: string }) {
   const result = calculate(date);
@@ -75,7 +76,7 @@ export function VerticalTable({ date }: { date: string }) {
 
         <Table.Tr>
           <Table.Td key={10}>
-            <Text>{getCardName(result.I.Y)}</Text>
+            <Text>{getCardName(pluto(result.I.Y))}</Text>
           </Table.Td>
         </Table.Tr>
         <Table.Tr>
