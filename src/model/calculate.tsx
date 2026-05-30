@@ -1,3 +1,5 @@
+import { Temporal } from "@js-temporal/polyfill";
+
 function sumDigits(num: number): number {
   if (num === 0) {
     return 0;
